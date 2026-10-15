@@ -31,7 +31,7 @@
 #define _GNU_SOURCE 1
 #endif
 
-#ifndef __EMSCRIPTEN__
+#if !defined(__EMSCRIPTEN__) && !defined(__wasm__)
 
 #include <fficonfig.h>
 #include <ffi.h>
